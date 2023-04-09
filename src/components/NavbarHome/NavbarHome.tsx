@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Logo from "../../../assets/logo.png";
 
-export const Navbar = () => {
+export const NavbarHome = () => {
   return (
     <nav className="bg-primary w-100 h-[100px] flex flex-row justify-between items-center pl-[8px] pr-[8px]">
       <div className="flex">
