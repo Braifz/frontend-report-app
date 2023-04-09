@@ -6,7 +6,6 @@ export default function Home() {
       <Navbar />
       <div>
         <h1 className="text-8xl h-100 bg-blue flex content-center justify-center">
-          {" "}
           hello
         </h1>
       </div>
