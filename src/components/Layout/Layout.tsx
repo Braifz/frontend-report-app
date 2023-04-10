@@ -5,7 +5,7 @@ export const Layout = ({ children }: any) => {
   return (
     <div className="bg-secondary">
       <Navbar />
-      <div className="mt-[32px] mb-[48px]">{children}</div>
+      <div className="mt-[48px] h-screen mb-[48px]">{children}</div>
       <Footer />
     </div>
   );
