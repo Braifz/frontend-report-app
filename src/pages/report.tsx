@@ -5,8 +5,29 @@ import { InputFile } from "@/components/InputFile/InputFile";
 import { InputText } from "@/components/InputText/InputText";
 
 const User = () => {
-  const [] = useState();
+  const [selectFile, setSelectedFile] = useState();
+  const [isFilePicked, setIsFilePicked] = useState<boolean>(false);
+  const [description, setDescription] = useState<string>("");
   const { address, isConnected } = useAccount();
+
+  const fileChangeHandler = (event: any) => {
+    setSelectedFile(event.target.files[0]);
+    setIsFilePicked(true);
+  };
+
+  const descriptionChangeHandler = (event: any) => {
+    setDescription(event.target.value);
+  };
+
+  const handleSubmit = () => {
+    const obj = {
+      description: description,
+      file: selectFile,
+    };
+
+    console.log({ obj });
+  };
+
   return (
     <>
       <NavbarReport />
@@ -31,11 +52,12 @@ const User = () => {
         {isConnected ? <h1> address connected: {address}</h1> : null}
 
         <div className="bg-gradient-to-r md:w-[600px] from-primary to-dark flex flex-col items-center justify-center m-[16px] rounded-lg p-[24px] h-[400px] shadow-lg shadow-dark mb-[32px]">
-          <InputFile />
-          <InputText />
+          <InputFile fileChangeHandler={fileChangeHandler} />
+          <InputText descriptionChangeHandler={descriptionChangeHandler} />
           <button
             type="button"
             className="bg-button mt-[8px] text-dark p-[8px] rounded-xl shadow-sm shadow-dark font-bold"
+            onClick={handleSubmit}
           >
             Enviar
           </button>
