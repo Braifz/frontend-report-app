@@ -4,7 +4,7 @@ import Image from "next/image";
 import Logo from "../../../assets/logo.png";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
-export const NavbarReport = () => {
+export const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-primary to-dark w-100 h-[100px] flex flex-row justify-between items-center pl-[8px] pr-[8px]">
       <Link href="/" className="flex">

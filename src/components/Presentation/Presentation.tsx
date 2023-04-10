@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import InfractionImage from "../../../assets/image-infraction.png";
 
@@ -13,9 +14,12 @@ export const Presentation = () => {
         Aquí podrás hacer tus denuncias para que juntos mejoremos la Ciudad
       </h2>
       <Image src={InfractionImage} alt="infraction image" />
-      <button className="bg-primary p-3 text-secondary rounded-lg hover:saturate-150">
-        Conoce más
-      </button>
+      <Link
+        href={"/report"}
+        className="bg-primary p-3 text-secondary rounded-lg hover:saturate-150"
+      >
+        Hace tu reporte
+      </Link>
     </main>
   );
 };
