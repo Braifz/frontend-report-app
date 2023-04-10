@@ -10,16 +10,18 @@ const User = () => {
   return (
     <>
       <NavbarReport />
-      <div className="min-h-full bg-secondary w-full flex flex-col items-center justify-center">
-        <h1 className="text-center text-dark text-xl mt-[32px] ">
-          <strong className="block mb-[16px] text-3xl">¡Bienvenido!</strong> Acá
-          podrá hacer su Crypto Multa
+      <div className="h-screen bg-secondary w-full flex flex-col items-center justify-center">
+        <h1 className="text-center text-dark text-xl md:text-2xl mt-[32px] ">
+          <strong className="block mb-[16px] text-3xl md:text-4xl">
+            ¡Bienvenido!
+          </strong>{" "}
+          Acá podrá hacer su Crypto Multa
         </h1>
-        <div className="bg-gradient-to-r p-[32px] m-[16px] rounded-xl shadow-lg shadow-dark from-primary to-dark flex flex-col items-center max-w-4xl justify-center text-secondary">
-          <p className="border-solid border-b-2 text-lg mb-[16px] border-secondary">
+        <div className="bg-gradient-to-r  md:w-[600px] p-[24px] m-[16px] rounded-xl shadow-lg shadow-dark from-primary to-dark flex flex-col items-center justify-center text-l md:text-xl text-secondary">
+          <p className="border-solid border-b-2 mb-[16px] border-secondary">
             Siga con las siguientes intrucciones :
           </p>
-          <ol className="pl-[24px]">
+          <ol>
             <li> 1. Conecte su Wallet.</li>
             <li>2. Suba la foto del reporte.</li>
             <li>3. Escriba una breve descripcion del reporte.</li>
@@ -28,7 +30,7 @@ const User = () => {
         </div>
         {isConnected ? <h1> address connected: {address}</h1> : null}
 
-        <div className="bg-gradient-to-r from-primary to-dark flex flex-col items-center justify-center m-[16px] max-w-4xl rounded-lg p-[24px] h-[400px] shadow-lg shadow-dark mb-[32px]">
+        <div className="bg-gradient-to-r md:w-[600px] from-primary to-dark flex flex-col items-center justify-center m-[16px] rounded-lg p-[24px] h-[400px] shadow-lg shadow-dark mb-[32px]">
           <InputFile />
           <InputText />
           <button
