@@ -52,7 +52,7 @@ const User = () => {
 
   return (
     <Layout>
-      <div className="h-screen bg-secondary w-full flex flex-col items-center justify-center">
+      <div className="bg-secondary w-full flex flex-col items-center justify-center">
         <h1 className="text-center text-dark text-xl md:text-2xl mt-[32px] ">
           <strong className="block mb-[16px] text-3xl md:text-4xl">
             ¡Bienvenido!
