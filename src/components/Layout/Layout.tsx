@@ -3,9 +3,11 @@ import { Footer } from "../Footer/Footer";
 
 export const Layout = ({ children }: any) => {
   return (
-    <div className="bg-secondary">
+    <div className="bg-secondary h-auto">
       <Navbar />
-      <div className="mt-[48px] h-auto mb-[48px]">{children}</div>
+      <div className="flex flex-col items-center justify-center">
+        {children}
+      </div>
       <Footer />
     </div>
   );
