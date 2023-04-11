@@ -7,7 +7,7 @@ import Image from "next/image";
 import { Instructions } from "@/components/Instructions/Instructions";
 
 const User = () => {
-  const [selectFile, setSelectedFile] = useState();
+  const [selectFile, setSelectedFile] = useState<string | null>();
   const [isFilePicked, setIsFilePicked] = useState<boolean>(false);
   const [description, setDescription] = useState<string>("");
   const [imgConverted, setImgConverted] = useState("");
@@ -47,12 +47,11 @@ const User = () => {
       description: description,
       file: selectFile,
     };
-
     console.log({ obj });
   };
 
   return (
-    <>
+    <div>
       <Layout>
         <div className="h-screen bg-secondary w-full flex flex-col items-center justify-center">
           <h1 className="text-center text-dark text-xl md:text-2xl mt-[32px] ">
@@ -64,7 +63,7 @@ const User = () => {
           <Instructions />
           {isConnected ? <h1> address connected: {address}</h1> : null}
 
-          <div className="bg-gradient-to-r md:w-[600px] from-primary to-dark flex flex-col items-center justify-center m-[16px] h-auto rounded-lg p-[24px] h-[400px] shadow-lg shadow-dark mb-[32px]">
+          <div className="bg-gradient-to-r md:w-[600px] from-primary to-dark flex flex-col items-center justify-center m-[16px] h-auto rounded-lg p-[24px]  shadow-lg shadow-dark mb-[32px]">
             <InputFile fileChangeHandler={fileChangeHandler} />
             {isFilePicked ? (
               <Image
@@ -86,7 +85,7 @@ const User = () => {
           </div>
         </div>
       </Layout>
-    </>
+    </div>
   );
 };
 
