@@ -52,7 +52,7 @@ const User = () => {
 
   return (
     <Layout>
-      <div className="bg-secondary w-full flex flex-col items-center justify-center">
+      <div className="bg-secondary flex flex-col items-center justify-center">
         <h1 className="text-center text-dark text-xl md:text-2xl mt-[32px] ">
           <strong className="block mb-[16px] text-3xl md:text-4xl">
             ¡Bienvenido!
@@ -60,9 +60,8 @@ const User = () => {
           Acá podrá hacer su Crypto Multa
         </h1>
         <Instructions />
-        {isConnected ? <h1> address connected: {address}</h1> : null}
 
-        <div className="bg-gradient-to-r md:w-[600px] from-primary to-dark flex flex-col items-center justify-center m-[16px] h-auto rounded-lg p-[24px]  shadow-lg shadow-dark mb-[32px]">
+        <div className="bg-gradient-to-r md:w-[600px] from-primary to-dark flex flex-col items-center justify-center m-[16px] h-auto rounded-lg p-[16px]  shadow-lg shadow-dark mb-[32px]">
           <InputFile fileChangeHandler={fileChangeHandler} />
           {isFilePicked ? (
             <Image
