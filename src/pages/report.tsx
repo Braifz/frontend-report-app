@@ -51,41 +51,39 @@ const User = () => {
   };
 
   return (
-    <div>
-      <Layout>
-        <div className="h-screen bg-secondary w-full flex flex-col items-center justify-center">
-          <h1 className="text-center text-dark text-xl md:text-2xl mt-[32px] ">
-            <strong className="block mb-[16px] text-3xl md:text-4xl">
-              ¡Bienvenido!
-            </strong>{" "}
-            Acá podrá hacer su Crypto Multa
-          </h1>
-          <Instructions />
-          {isConnected ? <h1> address connected: {address}</h1> : null}
+    <Layout>
+      <div className="h-screen bg-secondary w-full flex flex-col items-center justify-center">
+        <h1 className="text-center text-dark text-xl md:text-2xl mt-[32px] ">
+          <strong className="block mb-[16px] text-3xl md:text-4xl">
+            ¡Bienvenido!
+          </strong>{" "}
+          Acá podrá hacer su Crypto Multa
+        </h1>
+        <Instructions />
+        {isConnected ? <h1> address connected: {address}</h1> : null}
 
-          <div className="bg-gradient-to-r md:w-[600px] from-primary to-dark flex flex-col items-center justify-center m-[16px] h-auto rounded-lg p-[24px]  shadow-lg shadow-dark mb-[32px]">
-            <InputFile fileChangeHandler={fileChangeHandler} />
-            {isFilePicked ? (
-              <Image
-                className="rounded-lg m-[8px]"
-                src={imgConverted}
-                alt="fileimage"
-                width={150}
-                height={150}
-              />
-            ) : null}
-            <InputText descriptionChangeHandler={descriptionChangeHandler} />
-            <button
-              type="button"
-              className="bg-button mt-[8px] text-dark p-[8px] rounded-xl shadow-sm shadow-dark font-bold"
-              onClick={handleSubmit}
-            >
-              Enviar
-            </button>
-          </div>
+        <div className="bg-gradient-to-r md:w-[600px] from-primary to-dark flex flex-col items-center justify-center m-[16px] h-auto rounded-lg p-[24px]  shadow-lg shadow-dark mb-[32px]">
+          <InputFile fileChangeHandler={fileChangeHandler} />
+          {isFilePicked ? (
+            <Image
+              className="rounded-lg m-[8px]"
+              src={imgConverted}
+              alt="fileimage"
+              width={150}
+              height={150}
+            />
+          ) : null}
+          <InputText descriptionChangeHandler={descriptionChangeHandler} />
+          <button
+            type="button"
+            className="bg-button mt-[8px] text-dark p-[8px] rounded-xl shadow-sm shadow-dark font-bold"
+            onClick={handleSubmit}
+          >
+            Enviar
+          </button>
         </div>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 };
 
