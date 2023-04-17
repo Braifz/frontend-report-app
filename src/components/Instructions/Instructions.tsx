@@ -1,6 +1,6 @@
 export const Instructions = () => {
   return (
-    <div className="bg-gradient-to-r  md:w-[600px] p-[24px] m-[16px] rounded-xl shadow-lg shadow-dark from-primary to-dark flex flex-col items-center justify-center text-l md:text-xl text-secondary">
+    <div className="bg-gradient-to-r  w-auto mb-[16px]  md:w-[600px] p-[24px]  rounded-xl shadow-lg shadow-dark from-primary to-dark flex flex-col items-center justify-center text-l md:text-xl text-secondary">
       <p className="border-solid border-b-2 mb-[16px] border-secondary">
         Siga con las siguientes intrucciones :
       </p>
